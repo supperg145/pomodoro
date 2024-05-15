@@ -13,27 +13,32 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body style="background-color: cadetblue;">
     <div class="main">
       <div class="setTimer">
         <div class="break">
-          <h5>Break</h5>
+          <h2>Break</h2>
           <div class="breakButtons">
-            <button class="button btn btn-light">-</button>
-            <p>5</p>
-            <button class="button btn btn-light">+</button>
+            <button class="button btn btn-light btn-lg minus">-</button>
+            <p class="breakTime">5</p>
+            <button class="button btn btn-light btn-lg plus">+</button>
           </div>
         </div>
         <div class="break">
-          <h5>Break</h5>
+          <h2>Break</h2>
           <div class="breakButtons">
-            <button class="button btn btn-light">-</button>
-            <p>25:00</p>
-            <button class="button btn btn-light">+</button>
+            <button class="button btn btn-light btn-lg minus">-</button>
+            <p class="studyTime">25:00</p>
+            <button class="button btn btn-light btn-lg plus">+</button>
           </div>
         </div>
       </div>
-      <div>25:00</div>
+      <div class="circuitButtons">
+        <button class="button btn btn-primary start">Start</button>
+        <button class="button btn btn-warning reset">Reset</button>
+        <button class="button btn btn-danger stop">Stop</button>
+      </div>
     </div>
+    <div class="timer">25:00</div>
   </body>
 </html>

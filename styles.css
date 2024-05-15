@@ -2,3 +2,49 @@
     margin: 0;
     padding: 0;
 }
+
+.main {
+    width: 80%;
+    border: 3px black solid;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.setTimer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.breakButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.break{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.break button {
+    margin: 20px;
+}
+
+.timer {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.circuitButtons {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom :10px;
+    margin-top: 10px;
+}
