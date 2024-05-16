@@ -10,6 +10,7 @@ const minusBreakButton = document.querySelector("#minusBreak");
 const plusBreakButton = document.querySelector("#plusBreak");
 const minusStudy = document.querySelector("#minusStudy");
 const plusStudy = document.querySelector("#plusStudy");
+const whatTime = document.querySelector(".whatTime")
 
 //initial values
 let timerInterval;
@@ -30,26 +31,23 @@ console.log(studyMinutes, studySeconds);
 
 //Functions
 const updateTime = () => {
-    if(startMinutes === 0 && startSeconds === 0) {
-        window.alert("Please set the values first")
-        startTime.innerHTML = "00:00";
-        breakTime.innerHTML = "00:00";
-        clearInterval(timerInterval)
-        return
+  if (studyMinutes === 0 && studySeconds === 0) {
+    if (breakMinutes === 0 && breakSeconds === 0) {
+      clearInterval(timerInterval);
+      console.log("Timer Finished");
+      return;
     }
 
-  if (studyMinutes === 0 && studySeconds === 0) {
     breakSeconds--;
 
     if (breakSeconds < 0) {
       breakMinutes--;
       breakSeconds = 59;
     }
-    if (breakMinutes === 0 && breakSeconds === 0) {
-      clearInterval(timerInterval);
-    }
+
     console.log("Break Time Started");
     updateDisplay(breakMinutes, breakSeconds);
+    whatTime.textContent = "Break Time";
   } else {
     studySeconds--;
 
@@ -60,6 +58,7 @@ const updateTime = () => {
 
     console.log("Study Time Started");
     updateDisplay(studyMinutes, studySeconds);
+    whatTime.textContent = "Study Time"
   }
 };
 //Updating the display
